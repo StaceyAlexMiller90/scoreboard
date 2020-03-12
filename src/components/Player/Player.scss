@@ -1,0 +1,21 @@
+// src/components/Player/Player.scss
+@import "../../style/_config";
+
+.Player {
+  display: block; // instead of list-item
+  background: $light;
+  position: relative;
+  p {
+    margin: 0;
+    padding: 0.3rem 0.7rem 0.7rem;
+  }
+  .percentage_coloring {
+    position: absolute;
+    bottom: 10;
+    left: 0;
+    height: 0.5rem;
+    transition: all 0.2s ease;
+    background: $primary; // fallback for if the browser does not support gradients
+    background: linear-gradient(90deg, $secondary, $primary);
+  }
+}
